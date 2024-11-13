@@ -1,4 +1,5 @@
 ﻿using AppHotel.Properties.Models;
+using System.Reflection;
 
 namespace AppHotel
 {
@@ -24,6 +25,24 @@ namespace AppHotel
                 ValorDiariaAdulto = 50.0,
                 ValorDiariaCrianca = 25.0
             }
+        };
+
+         public List<Evento> lista_evento = new List<Evento>
+        {
+            new Evento
+            {
+                Descricao = "Casamento",
+                ValorDiariaAdulto = 300.0,
+                ValorDiariaCrianca = 170.0
+            },
+           
+            new Evento
+            {
+                Descricao = "Aniversario",
+                ValorDiariaAdulto = 150.0,
+                ValorDiariaCrianca = 75.0
+            }
+
         };
 
         public App()

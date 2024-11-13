@@ -52,10 +52,42 @@
 						   FontAttributes="Italic"
 						   Margin="0,5,0,10"
 						   HorizontalTextAlignment="Start" />
+
+                            <Label Text="✨ Celebre Seus Momentos Especiais Conosco ✨ "
+                            FontSize="20"
+                            TextColor="#4A5454"
+                            FontAttributes="Bold"
+                            HorizontalTextAlignment="Center"
+                            Margin="0,0,0,10" />
+
+                            <Label Text="Casamentos 💍 "
+                            FontSize="20"
+                            TextColor="#4A5454"
+                            FontAttributes="Bold"
+                            Margin="0,0,0,10" />
+
+                            <Label Text="Transforme o dia mais importante de sua vida em uma celebração mágica. Desde uma cerimônia intimista ao ar livre, com o som suave da natureza como trilha sonora, até uma festa encantadora repleta de luzes e sorrisos. Nossa equipe cuida de cada detalhe para que você e seus convidados vivam um dia inesquecível, repleto de amor e emoção. Aqui, você não está apenas celebrando um casamento; está criando memórias que durarão para sempre."
+                            FontSize="16"
+                            TextColor="#4A5454"
+                            Margin="0,5,0,10"
+                            HorizontalTextAlignment="Start" />
+
+                            <Label Text="Aniversários 🎉 "
+                            FontSize="20"
+                            TextColor="#4A5454"
+                            FontAttributes="Bold"
+                            Margin="0,0,0,10" />
+
+                            <Label Text="Celebre a vida em grande estilo! Se o seu desejo é um evento alegre e cheio de energia ou uma comemoração mais tranquila e elegante, nosso espaço se adapta para oferecer o cenário perfeito para o seu aniversário. Traga seus amigos e familiares para celebrar com você em um ambiente acolhedor, onde cada momento é cuidadosamente planejado para tornar seu dia ainda mais especial."
+                            FontSize="16"
+                            TextColor="#4A5454"
+                            Margin="0,5,0,10"
+                            HorizontalTextAlignment="Start" />
+
                         </StackLayout>
                     </Frame>
 
-                    <Frame BackgroundColor="#FAFAFA" Padding="20" CornerRadius="15" HasShadow="True" Margin="0,0,0,10">
+                    <Frame BackgroundColor="Transparent" Padding="20" CornerRadius="15" HasShadow="True" Margin="0,0,0,10">
                         <StackLayout>
                             <Label Text="🌿 Nossos Tipos de Hospedagens 🌿 " 
            FontSize="20"
@@ -64,7 +96,7 @@
            HorizontalOptions="Center"
            Margin="0,0,0,10" />
 
-                            <Grid ColumnDefinitions="*" RowDefinitions="*,*,*,*,*,*,*">
+                            <Grid ColumnDefinitions="*,*,*" RowDefinitions="*,*,*">
                                 <!-- Chalé Familiar -->
                                 <StackLayout Grid.Row="0" Grid.Column="0" HorizontalOptions="Center">
                                     <Image Source="chale_familia.jpeg"  Aspect="AspectFill" />
@@ -72,37 +104,37 @@
                                 </StackLayout>
 
                                 <!-- Chalé Familiar -->
-                                <StackLayout Grid.Row="1" Grid.Column="0" HorizontalOptions="Center">
+                                <StackLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="Center">
                                     <Image Source="chale_familia2.jpeg" Aspect="AspectFill" />
                                     <Label Text="Chalé Familiar" HorizontalOptions="Center" FontAttributes="Bold" />
                                 </StackLayout>
 
                                 <!-- Chalé Casal -->
-                                <StackLayout Grid.Row="2" Grid.Column="0" HorizontalOptions="Center">
+                                <StackLayout Grid.Row="1" Grid.Column="0" HorizontalOptions="Center">
                                     <Image Source="chale_casal.jpeg"  Aspect="AspectFill" />
                                     <Label Text="Chalé Casal" HorizontalOptions="Center" FontAttributes="Bold" />
                                 </StackLayout>
 
                                 <!-- Chalé Casal -->
-                                <StackLayout Grid.Row="3" Grid.Column="0" HorizontalOptions="Center">
+                                <StackLayout Grid.Row="1" Grid.Column="1" HorizontalOptions="Center">
                                     <Image Source="chale_casal2.jpeg" Aspect="AspectFill" />
                                     <Label Text="Chalé Casal" HorizontalOptions="Center" FontAttributes="Bold" />
                                 </StackLayout>
 
-                                <!-- Chalé Casal -->
-                                <StackLayout Grid.Row="4" Grid.Column="0" HorizontalOptions="Center">
+                                <!-- Salão Festas -->
+                                <StackLayout Grid.Row="0" Grid.Column="2" HorizontalOptions="Center">
                                     <Image Source="chale_casal3.jpeg" Aspect="AspectFill" />
-                                    <Label Text="Chalé Casal" HorizontalOptions="Center" FontAttributes="Bold" />
+                                    <Label Text="Salão de Festas" HorizontalOptions="Center" FontAttributes="Bold" />
                                 </StackLayout>
 
                                 <!-- Camping -->
-                                <StackLayout Grid.Row="5" Grid.Column="0" HorizontalOptions="Center">
+                                <StackLayout Grid.Row="2" Grid.Column="1" HorizontalOptions="Center">
                                     <Image Source="camping.jpg" Aspect="AspectFill" />
                                     <Label Text="Camping" HorizontalOptions="Center" FontAttributes="Bold" />
                                 </StackLayout>
 
                                 <!-- Restaurante -->
-                                <StackLayout Grid.Row="6" Grid.Column="0" HorizontalOptions="Center">
+                                <StackLayout Grid.Row="1" Grid.Column="2" HorizontalOptions="Center">
                                     <Image Source="restaurante.jpg" Aspect="AspectFill" />
                                     <Label Text="Restaurante" HorizontalOptions="Center" FontAttributes="Bold" />
                                 </StackLayout>
@@ -121,9 +153,9 @@
                         </VerticalStackLayout>
                     </Frame>
 
-                    <!-- Botão ContratarHospedagem com Sombra -->
+                    <!-- Botão ContratarHospedagem  -->
                     <Frame CornerRadius="25" HasShadow="True" Padding="0" HorizontalOptions="Center">
-                        <Button Text="Contratar Reserva" 
+                        <Button Text="Contratar Hospedagem" 
                         BackgroundColor="#388E3C" 
                         TextColor="White" 
                         CornerRadius="25"
@@ -131,6 +163,17 @@
                         HeightRequest="50"
                         WidthRequest="240"
                         Clicked="Button_Clicked"/>
+                    </Frame>
+                    <!-- Botão ContratarEvento  -->
+                    <Frame CornerRadius="25" HasShadow="True" Padding="0" HorizontalOptions="Center">
+                        <Button Text="Contratar Evento" 
+                                BackgroundColor="Orange" 
+                                TextColor="White" 
+                                CornerRadius="25"
+                                FontAttributes="Bold"
+                                HeightRequest="50"
+                                WidthRequest="240"
+                                Clicked="Button_Clicked_1"/>
                     </Frame>
 
                 </StackLayout>

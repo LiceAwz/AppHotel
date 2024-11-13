@@ -8,4 +8,5 @@
     <ShellContent Route="MainPage" ContentTemplate="{DataTemplate local:MainPage}" />
     <ShellContent Route="ContratacaoHospedagem" ContentTemplate="{DataTemplate local:ContratacaoHospedagem}" />
     <ShellContent Route="HospedagemContratada" ContentTemplate="{DataTemplate local:HospedagemContratada}" />
+    <ShellContent Title="Cadastro de Evento" ContentTemplate="{DataTemplate local:CadastroEventoPage }" />
 </Shell>
