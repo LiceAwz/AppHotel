@@ -66,6 +66,7 @@
 
                 <!-- Botão Avançar -->
                 <Frame CornerRadius="25" HasShadow="True" Padding="0" HorizontalOptions="Center">
+                    <Button Text="Voltar" BackgroundColor="Orange" TextColor="White" CornerRadius="20" HeightRequest="50" WidthRequest="140" Clicked="OnVoltarClicked"/>
                     <Button Text="Avançar" 
                             BackgroundColor="#388E3C" 
                             TextColor="White" 

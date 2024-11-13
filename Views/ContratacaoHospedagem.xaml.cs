@@ -57,5 +57,10 @@ namespace AppHotel.Views
             dtpck_checkout.MinimumDate = e.NewDate.AddDays(1);
             dtpck_checkout.MaximumDate = e.NewDate.AddMonths(6);
         }
+
+        private void OnVoltarClicked(object sender, EventArgs e)
+        {
+            Navigation.PopAsync();
+        }
     }
 }

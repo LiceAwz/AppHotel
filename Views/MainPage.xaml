@@ -156,7 +156,7 @@
                     <!-- Botão ContratarHospedagem  -->
                     <Frame CornerRadius="25" HasShadow="True" Padding="0" HorizontalOptions="Center">
                         <Button Text="Contratar Hospedagem" 
-                        BackgroundColor="#388E3C" 
+                        BackgroundColor="#81C784" 
                         TextColor="White" 
                         CornerRadius="25"
                         FontAttributes="Bold"

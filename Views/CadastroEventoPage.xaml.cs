@@ -21,33 +21,33 @@ namespace AppHotel.Views
 
         private async void OnAvancarClicked(object sender, EventArgs e)
         {
-            if (pck_alojamento.SelectedItem is HospedagemInfo selectedChale)
+            if (pck_alojamento.SelectedItem is Evento selectedEvento)
             {
-                var hospedagemInfo = new HospedagemInfo
+                var evento = new Evento
                 {
                     Adultos = (int)stp_adultos.Value,
                     Criancas = (int)stp_criancas.Value,
-                    TipoAcomodacao = selectedChale.Descricao,
+                    TipoEvento = selectedEvento.Descricao,
                     CheckIn = dtpck_checking.Date,
                     CheckOut = dtpck_checkout.Date,
-                    ValorDiariaAdulto = selectedChale.ValorDiariaAdulto,
-                    ValorDiariaCrianca = selectedChale.ValorDiariaCrianca,
-                    ValorTotal = CalcularValorTotal((int)stp_adultos.Value, (int)stp_criancas.Value, selectedChale, dtpck_checking.Date, dtpck_checkout.Date)
+                    ValorDiariaAdulto = selectedEvento.ValorDiariaAdulto,
+                    ValorDiariaCrianca = selectedEvento.ValorDiariaCrianca,
+                    ValorTotal = CalcularValorTotal((int)stp_adultos.Value, (int)stp_criancas.Value, selectedEvento, dtpck_checking.Date, dtpck_checkout.Date)
                 };
 
-                await Navigation.PushAsync(new HospedagemContratada(hospedagemInfo));
+                await Navigation.PushAsync(new ResumoEventoPage(evento));
             }
             else
             {
-                await DisplayAlert("Erro", "Selecione uma acomodação.", "OK");
+                await DisplayAlert("Erro", "Selecione um Evento.", "OK");
             }
         }
 
-        private double CalcularValorTotal(int adultos, int criancas, HospedagemInfo chale, DateTime checkIn, DateTime checkOut)
+        private double CalcularValorTotal(int adultos, int criancas, Evento evento, DateTime checkIn, DateTime checkOut)
         {
             int totalNoites = (checkOut - checkIn).Days;
-            double valorAdultos = adultos * chale.ValorDiariaAdulto;
-            double valorCriancas = criancas * chale.ValorDiariaCrianca;
+            double valorAdultos = adultos * evento.ValorDiariaAdulto;
+            double valorCriancas = criancas * evento.ValorDiariaCrianca;
             return (valorAdultos + valorCriancas) * totalNoites;
         }
 
@@ -55,6 +55,11 @@ namespace AppHotel.Views
         {
             dtpck_checkout.MinimumDate = e.NewDate.AddDays(1);
             dtpck_checkout.MaximumDate = e.NewDate.AddMonths(6);
+        }
+
+        private void OnVoltarClicked(object sender, EventArgs e)
+        {
+            Navigation.PopAsync();
         }
     }
 }

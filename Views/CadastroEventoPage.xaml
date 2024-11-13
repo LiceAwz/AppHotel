@@ -30,24 +30,24 @@
                     
                 </Frame>
                 <Frame BackgroundColor="Transparent" CornerRadius="10" Padding="15" HasShadow="True">
-                   
-                    <Picker x:Name="pck_alojamento" Title="Selecione seu Evento" ItemDisplayBinding="{Binding Descricao}"/>
+
+                    <Picker x:Name="pck_alojamento" Title="Selecione seu Evento" FontAttributes="Bold" ItemDisplayBinding="{Binding Descricao}"/>
                 </Frame>
 
                 <!-- Contador de Adultos e Crianças -->
                 <Frame BackgroundColor="Transparent" CornerRadius="10" Padding="20" HasShadow="True">
                     <Grid ColumnDefinitions="*,Auto,Auto" RowDefinitions="Auto,Auto" VerticalOptions="Center" HorizontalOptions="Center">
                         <!-- Contador de Adultos -->
-                        <Label Grid.Row="0" Grid.Column="0" Text="Adultos:" FontSize="18" VerticalOptions="Center"/>
+                        <Label Grid.Row="0" Grid.Column="0" Text="Adultos:" FontAttributes="Bold" FontSize="18" VerticalOptions="Center"/>
                         <Label Grid.Row="0" Grid.Column="1" TextColor="Black" FontAttributes="Bold" FontSize="22"
                        Text="{Binding Value}" BindingContext="{x:Reference stp_adultos}" VerticalOptions="Center"/>
-                        <Stepper Grid.Row="0" Grid.Column="2" x:Name="stp_adultos" Minimum="0" Maximum="10" Increment="1"/>
+                        <Stepper Grid.Row="0" Grid.Column="2" x:Name="stp_adultos" Minimum="0" Maximum="40" Increment="1"/>
 
                         <!-- Contador de Crianças -->
-                        <Label Grid.Row="1" Grid.Column="0" Text="Crianças:" FontSize="18" VerticalOptions="Center"/>
+                        <Label Grid.Row="1" Grid.Column="0" Text="Crianças:" FontAttributes="Bold" FontSize="18" VerticalOptions="Center"/>
                         <Label Grid.Row="1" Grid.Column="1" TextColor="Black" FontAttributes="Bold" FontSize="22"
                        Text="{Binding Value}" BindingContext="{x:Reference stp_criancas}" VerticalOptions="Center"/>
-                        <Stepper Grid.Row="1" Grid.Column="2" x:Name="stp_criancas" Minimum="0" Maximum="10" Increment="1"/>
+                        <Stepper Grid.Row="1" Grid.Column="2" x:Name="stp_criancas" Minimum="0" Maximum="20" Increment="1"/>
                     </Grid>
                 </Frame>
 
@@ -55,9 +55,11 @@
 
                 <!-- Período da Estadia - Check-in -->
                 <Frame BackgroundColor="Transparent" CornerRadius="10" Padding="15" HasShadow="True">
-                    <Label Text="Período da Estadia" FontSize="18" FontAttributes="Bold" TextColor="#2E7D32" Margin="0,0,0,10"/>
+                    <Label Text="Período da Estadia" FontSize="18" FontAttributes="Bold" TextColor="Black" Margin="0,0,0,10"/>
+                </Frame>
+                <Frame BackgroundColor="Transparent" CornerRadius="10" Padding="15" HasShadow="True">
                     <HorizontalStackLayout Spacing="10">
-                        <Label Text="Check-in" FontSize="16"/>
+                        <Label Text="Check-in" FontAttributes="Bold" FontSize="16"/>
                         <DatePicker x:Name="dtpck_checking" DateSelected="dtpck_checking_DateSelected" Format="dd/MM/yyyy"/>
                     </HorizontalStackLayout>
                 </Frame>
@@ -65,13 +67,14 @@
                 <!-- Período da Estadia - Check-out -->
                 <Frame BackgroundColor="Transparent" CornerRadius="10" Padding="15" HasShadow="True">
                     <HorizontalStackLayout Spacing="10">
-                        <Label Text="Check-out" FontSize="16"/>
+                        <Label Text="Check-out" FontAttributes="Bold" FontSize="16"/>
                         <DatePicker x:Name="dtpck_checkout" Format="dd/MM/yyyy"/>
                     </HorizontalStackLayout>
                 </Frame>
 
                 <!-- Botão Avançar -->
                 <Frame CornerRadius="25" HasShadow="True" Padding="0" HorizontalOptions="Center">
+                    <Button Text="Voltar" BackgroundColor="Orange" TextColor="White" CornerRadius="20" HeightRequest="50" WidthRequest="140" Clicked="OnVoltarClicked"/>
                     <Button Text="Avançar" 
                         BackgroundColor="#388E3C" 
                         TextColor="White" 
